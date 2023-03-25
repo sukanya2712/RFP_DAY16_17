@@ -1,10 +1,13 @@
-package com.unorderedlist;
+package OrderedList;
 
-public class LinkedList<T> {
-    Node<T> head;
-    Node<T> tail;
+import com.unorderedlist.Node;
+
+public class LinkedListNo<T> {
+
+    NodeNo<T> head;
+    NodeNo<T> tail;
     public void addData(T data){
-        Node<T> newNode = new Node(data);
+        NodeNo<T> newNode = new NodeNo(data);
         if(head == null){
             head=newNode;
             tail=newNode;
@@ -15,7 +18,7 @@ public class LinkedList<T> {
         }
     }
     public void display() {
-        Node<T> temp = head;
+        NodeNo<T> temp = head;
         while(temp!= null)
         {
             System.out.print(temp.data + "-> ");
@@ -27,13 +30,13 @@ public class LinkedList<T> {
             return;
         }
 
-        if (head.data.equals(delete)) {
+        if (head.data == delete) {
             head = head.next;
             return;
         }
 
-        Node<T> prev = head;
-        Node<T> current = head.next;
+        NodeNo<T> prev = head;
+        NodeNo<T> current = head.next;
 
         while (current != null) {
             if (current.data.equals(delete)) {
@@ -46,11 +49,11 @@ public class LinkedList<T> {
         }
     }
     public void search(T search) {
-        Node <T> temp = head;
+        NodeNo <T> temp = head;
         boolean flag= false;
         while(temp!=null)
         {
-            if(temp.data.equals(search))
+            if(temp.data == search)
             {
                 flag=true;
                 deleteanyelement(search);
