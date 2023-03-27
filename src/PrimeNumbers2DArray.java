@@ -17,6 +17,7 @@ public class PrimeNumbers2DArray {
             end += 100;
         }
 
+
         // Step 5: Print out the prime numbers in each range
         for (int i = 0; i < 10; i++) {
             System.out.print("Primes between " + ((i * 100) + 1) + " and " + ((i + 1) * 100) + ": ");

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Q9 {
+public class primeno {
 
     // Method to check if a number is prime
     public static boolean isPrime(int n) {
